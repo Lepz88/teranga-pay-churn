@@ -1,7 +1,6 @@
 # 📓 Journal de bord du projet
 
 > Une entrée par étape : ce que j'ai fait, ce qui a bloqué, comment j'ai résolu, ce que j'ai appris.
-> 💡 Réécris chaque entrée avec tes propres mots.
 
 ---
 
@@ -9,7 +8,7 @@
 
 ### Étape 1 : Environnement
 - **Fait :** installation des librairies (pandas, numpy, psycopg2), vérification de PostgreSQL 18 (port 5432, utilisateur postgres).
-- **Appris :** _à compléter_
+- **Appris :** préparer un environnement de travail (Python, VS Code, PostgreSQL) avant de commencer un projet data.
 
 ### Étape 2 : Génération des données
 - **Fait :** génération de 800 agents, 12 000 clients, 581 007 transactions brutes et 8 775 ruptures de liquidité sur 12 mois (oct. 2025 à sept. 2026).
@@ -62,7 +61,7 @@
 - **Fait :** fonction de fenêtre `LAG`, `COUNT(*) FILTER`, backtest au 30/06/2026, liste d'agents à appeler (`sql/11_signal_faible.sql`).
 - **Résultat :** l'agent TP-AG-00002 a perdu 62 % de son activité le mois avant son départ. Backtest : forte baisse → 80 % de départs contre 6,3 % (×12,7, 10 agents) ; baisse modérée ×2,8. Liste au 30/09 : 9 agents à appeler, 64 à surveiller. Le signal repère environ 1 départ sur 3.
 - **Erreurs corrigées :** NULL ne veut pas dire 0 (LAG vide car les données commencent en octobre 2025) ; le tri de la liste se lit dans le ORDER BY, pas dans le milieu ou le type de point ; une action doit découler des données (pas « changer le type de point », mais réapprovisionner un agent qui a 16 ruptures).
-- **Appris :** variation en % = (nouvelle − ancienne) ÷ ancienne (voir `docs/fiche_calculs.md`).
+- **Appris :** variation en % = (nouvelle − ancienne) ÷ ancienne (voir ma fiche mémo des calculs).
 
 ### Étape 2.6 : Impact en FCFA
 - **Fait :** volume mensuel par statut, part liée à la liquidité, volume en jeu (`sql/12_impact_fcfa.sql`).
@@ -89,3 +88,11 @@
 - **Problèmes rencontrés le 30/10 :** 3 régions cachées par une barre de défilement (graphique agrandi) ; deux filtres empilés au même endroit (corrigé avec le volet Sélection) ; titre affiché au-dessus du bandeau (titre du visuel activé par erreur, trouvé par moi-même) ; mesure mise à la place d'une colonne dans le tableau ; « Somme de » sur des pourcentages (Ne pas résumer).
 - **Vérification :** les 9 agents à appeler du dashboard sont exactement ceux de la requête SQL de l'étape 2.5.
 - **✅ Sprint 3 terminé.** Reste : renommer les colonnes du tableau (5 min).
+
+---
+
+## Sprint 4 : Publication (31/10/2026)
+- **Fait :** finition du dashboard (colonnes du tableau renommées, test du filtre Kolda : 45,0 %) ; captures des 2 pages du dashboard ; README final (résumé « En bref », structure du projet, recommandations, limites et prochaines étapes, ce que j'ai appris) ; publication du projet sur GitHub avec `git init`, `git add`, `git commit` et `git push`.
+- **Problème rencontré :** sur GitHub, le README s'affichait en un seul paragraphe. Cause : le fichier était enregistré dans un mauvais encodage (`git ls-files --eol` indiquait `-text`). Solution : remplacer le fichier par la version en UTF-8, vérifier l'encodage dans VS Code, puis renvoyer.
+- **Vérification :** les notes personnelles sont bien exclues de GitHub grâce au `.gitignore` (contrôle avec `git ls-files docs`).
+- **Appris :** publier un projet avec Git ; toujours modifier les fichiers du projet dans VS Code (UTF-8) ; vérifier ce qui part sur GitHub avant et après l'envoi.

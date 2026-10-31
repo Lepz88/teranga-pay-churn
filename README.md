@@ -167,5 +167,4 @@ Deux pages, connectées directement à la base PostgreSQL :
 
 **Outils :** PostgreSQL 18 · SQL (CTE, fonctions de fenêtre `LAG`, `FILTER`, vues) · Python (pandas, matplotlib, psycopg2) · Power BI (DAX, mise en forme conditionnelle, segments)
 
-**Auteur :** Moulaye Idrisse Haidara · Data Analyst · Dakar, Sénégal · [LinkedIn](https://www.linkedin.com/in/moulaye-ha%C3%AFdara-a24071347)#   t e r a n g a - p a y - c h u r n  
- 
+**Auteur :** Moulaye Idrisse Haidara · Data Analyst Junior · Dakar, Sénégal · [LinkedIn](https://www.linkedin.com/in/moulaye-ha%C3%AFdara-a24071347)

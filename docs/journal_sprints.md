@@ -79,3 +79,13 @@
 - **Problèmes rencontrés :** « Python was not found » → utiliser `py` ; image absente → l'ancien script n'avait pas été remplacé.
 - **Appris :** une recette en 4 étapes (données, couleurs, graphique, textes) ; un titre qui donne la conclusion ; une seule couleur pour le message ; toujours l'effectif à côté d'un taux ; une gradation convainc plus que deux chiffres.
 - **Prochaine étape :** dashboard Power BI.
+
+## Sprint 3 (suite) : Power BI (28-29/10/2026)
+- **Fait le 28/10 :** connexion de Power BI à PostgreSQL, choix des tables, vérification des relations (modèle en étoile), suppression de `dim_client` et `rejets_transactions` du modèle.
+- **Fait le 29/10 :** 7 mesures DAX ; vue `v_statut_agents` enrichie en SQL (`sql/08b_vue_dashboard.sql`, 7 colonnes en plus) ; thème de couleurs commun avec Python ; fond de page, bandeau du titre ; 4 cartes de chiffres clés (27,1 % de churn, 164 M FCFA perdus par mois, 9 agents à appeler, 548 agents actifs).
+- **Problèmes rencontrés :** les thèmes étaient dans le ruban « Conception » et non « Afficher » ; le bandeau ne couvrait que les 2/3 (page de 1920 de large) ; texte resté noir ; carte affichant 16418 % (format pourcentage au lieu de nombre).
+- **Appris :** une mesure DAX se recalcule à chaque filtre ; 26 % ou 27,1 % selon la référence ; les calculs complexes en SQL, l'affichage en Power BI ; les règles d'un beau dashboard ; positionner les éléments en tapant des chiffres.
+- **Fait le 30/10 :** les 3 graphiques (ruptures de cash, régions, rural/urbain) avec titres-conclusions, info-bulles et mise en forme conditionnelle ; 3 filtres (région, milieu, type de point) ; page 2 « Agents à appeler » avec le tableau des 73 agents (9 prioritaires en haut).
+- **Problèmes rencontrés le 30/10 :** 3 régions cachées par une barre de défilement (graphique agrandi) ; deux filtres empilés au même endroit (corrigé avec le volet Sélection) ; titre affiché au-dessus du bandeau (titre du visuel activé par erreur, trouvé par moi-même) ; mesure mise à la place d'une colonne dans le tableau ; « Somme de » sur des pourcentages (Ne pas résumer).
+- **Vérification :** les 9 agents à appeler du dashboard sont exactement ceux de la requête SQL de l'étape 2.5.
+- **✅ Sprint 3 terminé.** Reste : renommer les colonnes du tableau (5 min).

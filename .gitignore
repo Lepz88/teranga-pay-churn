@@ -1,0 +1,11 @@
+# Données régénérables (seed fixe) : inutile de les versionner
+data/raw/*.csv
+__pycache__/
+.venv/
+*.pbix.bak
+
+# Notes personnelles de préparation (ne pas publier)
+docs/preparation_entretien.md
+docs/guide_graphiques.md
+docs/fiche_calculs.md
+docs/guide_powerbi.md

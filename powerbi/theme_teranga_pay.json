@@ -1,0 +1,16 @@
+{
+  "name": "Teranga Pay",
+  "dataColors": ["#2E6DB4", "#E8833A", "#9AA5B1", "#5B9BD5", "#F2B880", "#3F4A56", "#7FB77E", "#C8553D"],
+  "background": "#FFFFFF",
+  "foreground": "#1F2933",
+  "tableAccent": "#2E6DB4",
+  "good": "#2E6DB4",
+  "neutral": "#9AA5B1",
+  "bad": "#E8833A",
+  "textClasses": {
+    "callout": { "fontSize": 28, "fontFace": "Segoe UI Semibold", "color": "#1F2933" },
+    "title":   { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#1F2933" },
+    "header":  { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#1F2933" },
+    "label":   { "fontSize": 10, "fontFace": "Segoe UI", "color": "#52606D" }
+  }
+}
